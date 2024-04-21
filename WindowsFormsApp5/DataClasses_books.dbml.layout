@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses_books">
+  <DataContextMoniker Name="/DataClasses_booksDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6f7f5d04-a645-4ada-8797-6a58b2493f49" absoluteBounds="5.375, 1, 2, 3.3663965514302254">
+      <DataClassMoniker Name="/DataClasses_booksDataContext/books_new" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97a4fad2-fec1-458f-b484-76bad94ce690" absoluteBounds="5.39, 1.46, 1.9700000000000002, 2.8063965514302254" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fd469ef-06e6-4937-90ce-43cf5b123718" absoluteBounds="2, 3.75, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/DataClasses_booksDataContext/Spr_format" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b0425f3-69eb-4910-bd26-49da8161b83c" absoluteBounds="2.0150000000000006, 4.21, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 4.05819827571511); (5.375 : 4.05819827571511)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses_booksDataContext/Spr_format/Spr_format_books_new" />
+      <nodes>
+        <classShapeMoniker Id="0fd469ef-06e6-4937-90ce-43cf5b123718" />
+        <classShapeMoniker Id="6f7f5d04-a645-4ada-8797-6a58b2493f49" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="722a3b25-70aa-4419-99c0-7f6a8e8c1448" absoluteBounds="2, 2.25, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/DataClasses_booksDataContext/Spr_izd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47aa2b1d-6df1-4a50-8862-076af95bcb75" absoluteBounds="2.0149999999999997, 2.71, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.87932455296318); (5.375 : 2.87932455296318)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses_booksDataContext/Spr_izd/Spr_izd_books_new" />
+      <nodes>
+        <classShapeMoniker Id="722a3b25-70aa-4419-99c0-7f6a8e8c1448" />
+        <classShapeMoniker Id="6f7f5d04-a645-4ada-8797-6a58b2493f49" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="244c70a5-1c3b-4dce-9284-493113b69ddc" absoluteBounds="2, 0.875, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/DataClasses_booksDataContext/Spr_themes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e74ff049-6d2f-4760-90e7-2d8b2d7cf11b" absoluteBounds="2.0149999999999997, 1.335, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 1.56682455296318); (5.375 : 1.56682455296318)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses_booksDataContext/Spr_themes/Spr_themes_books_new" />
+      <nodes>
+        <classShapeMoniker Id="244c70a5-1c3b-4dce-9284-493113b69ddc" />
+        <classShapeMoniker Id="6f7f5d04-a645-4ada-8797-6a58b2493f49" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cee57e70-504e-410a-88f8-2110d5702a56" absoluteBounds="4.5, 4.625, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/DataClasses_booksDataContext/Spr_kategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd858b2d-da61-4ceb-b9a6-da4f25b56f77" absoluteBounds="4.515, 5.085, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.9375 : 4.625); (5.9375 : 4.36639655143023)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses_booksDataContext/Spr_kategory/Spr_kategory_books_new" />
+      <nodes>
+        <classShapeMoniker Id="cee57e70-504e-410a-88f8-2110d5702a56" />
+        <classShapeMoniker Id="6f7f5d04-a645-4ada-8797-6a58b2493f49" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

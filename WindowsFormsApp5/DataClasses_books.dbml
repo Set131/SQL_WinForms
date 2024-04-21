@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="books" Class="DataClasses_booksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HOME-PC\SQLEXPRESS;Initial Catalog=books;Integrated Security=True" SettingsObjectName="WindowsFormsApp5.Properties.Settings" SettingsPropertyName="booksConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.books_new" Member="books_new">
+    <Type Name="books_new">
+      <Column Name="N" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="New" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Pressrun" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="izd_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="format_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="themes_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kategory_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Spr_format_books_new" Member="Spr_format" ThisKey="format_id" OtherKey="id" Type="Spr_format" IsForeignKey="true" />
+      <Association Name="Spr_izd_books_new" Member="Spr_izd" ThisKey="izd_id" OtherKey="id" Type="Spr_izd" IsForeignKey="true" />
+      <Association Name="Spr_themes_books_new" Member="Spr_themes" ThisKey="themes_id" OtherKey="id" Type="Spr_themes" IsForeignKey="true" />
+      <Association Name="Spr_kategory_books_new" Member="Spr_kategory" ThisKey="kategory_id" OtherKey="Id" Type="Spr_kategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spr_format" Member="Spr_format">
+    <Type Name="Spr_format">
+      <Column Name="Format" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Spr_format_books_new" Member="books_new" ThisKey="id" OtherKey="format_id" Type="books_new" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spr_izd" Member="Spr_izd">
+    <Type Name="Spr_izd">
+      <Column Name="Izd" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Spr_izd_books_new" Member="books_new" ThisKey="id" OtherKey="izd_id" Type="books_new" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spr_themes" Member="Spr_themes">
+    <Type Name="Spr_themes">
+      <Column Name="Themes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Spr_themes_books_new" Member="books_new" ThisKey="id" OtherKey="themes_id" Type="books_new" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spr_kategory" Member="Spr_kategory">
+    <Type Name="Spr_kategory">
+      <Column Name="Category" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Spr_kategory_books_new" Member="books_new" ThisKey="Id" OtherKey="kategory_id" Type="books_new" />
+    </Type>
+  </Table>
+</Database>
